@@ -18,7 +18,7 @@ our $VERSION = '0.001';
 =head1 SYNOPSIS
 
   use Test::WWW::Mechanize tests => 5;
-  use HTML::Form::ListInput::mixin::ForceValue;
+  use HTML::Form::ForceValue;
 
   my $mech = WWW::Mechanize->new;
 
@@ -57,7 +57,7 @@ datum to the list of valid data.
 =cut
 
 use Sub::Exporter -setup => {
-  into    => 'HTML::Form::ListInput',
+  into    => 'HTML::Form::Input',
   exports => [ qw(force_value) ],
   groups  => [ default => [ qw(force_value) ] ],
 };
