@@ -9,11 +9,11 @@ HTML::Form::ForceValue - who cares what values are legal, anyway?
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =cut
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 =head1 SYNOPSIS
 
@@ -78,7 +78,7 @@ sub force_value {
 This implementation is extremely crude.  This feature should really be in
 HTML::Form (in my humble opinion), and this module should cease to exist once
 it is.  In the meantime, just keep in mind that I spent a lot more time
-packaging this than I did writing it.  I<Caveat importor!>.
+packaging this than I did writing it.  I<Caveat importor!>
 
 =head1 AUTHOR
 
@@ -88,7 +88,7 @@ Ricardo SIGNES, C<< <rjbs at cpan.org> >>
 
 Please report any bugs or feature requests to
 C<bug-form at rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Form>.
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=HTML-Form-ForceValue>.
 I will be notified, and then you'll automatically be notified of progress on
 your bug as I make changes.
 
@@ -96,7 +96,7 @@ your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Form
+    perldoc HTML::Form::ForceValue
 
 You can also look for information at:
 
@@ -104,19 +104,19 @@ You can also look for information at:
 
 =item * AnnoCPAN: Annotated CPAN documentation
 
-L<http://annocpan.org/dist/Form>
+L<http://annocpan.org/dist/HTML-Form-ForceValue>
 
 =item * CPAN Ratings
 
-L<http://cpanratings.perl.org/d/Form>
+L<http://cpanratings.perl.org/d/HTML-Form-ForceValue>
 
 =item * RT: CPAN's request tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Form>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=HTML-Form-ForceValue>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/Form>
+L<http://search.cpan.org/dist/HTML-Form-ForceValue>
 
 =back
 
