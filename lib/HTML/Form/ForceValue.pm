@@ -9,11 +9,11 @@ HTML::Form::ForceValue - who cares what values are legal, anyway?
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =cut
 
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 =head1 SYNOPSIS
 
@@ -67,7 +67,7 @@ sub force_value {
   my $old = $self->value;
   eval { $self->value($value); };
   if ($@ and $@ =~ /Illegal value/) {
-    push @{$self->{menu}}, { name => $value, $value => $value };
+    push @{$self->{menu}}, { name => $value, value => $value };
     return $self->value($value);
   }
   return $old;
