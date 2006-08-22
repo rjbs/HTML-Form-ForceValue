@@ -1,0 +1,10 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+lib/HTML/Form/ForceValue.pm
+t/00-load.t
+t/boilerplate.t
+t/form.t
+t/pod-coverage.t
+t/pod.t
