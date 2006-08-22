@@ -9,11 +9,11 @@ HTML::Form::ForceValue - who cares what values are legal, anyway?
 
 =head1 VERSION
 
-version 0.003
+version 0.005
 
 =cut
 
-our $VERSION = '0.003';
+our $VERSION = '0.005';
 
 =head1 SYNOPSIS
 
@@ -56,10 +56,44 @@ datum to the list of valid data.
 
 =cut
 
+sub import {
+  my $class = shift;
+  HTML::Form::ForceValue::Form->import(@_);
+  HTML::Form::ForceValue::Form::Input->import(@_);
+}
+
+package HTML::Form::ForceValue::Form;
 use Sub::Exporter -setup => {
-  into    => 'HTML::Form::Input',
+  into    => 'HTML::Form',
   exports => [ qw(force_value) ],
-  groups  => [ default => [ qw(force_value) ] ],
+  groups  => [ default => [ '-all' ] ],
+};
+
+sub force_value {
+  my ($self, $name, $value) = @_;
+
+  my $input = $self->find_input($name);
+
+  unless ($input) {
+    $input = HTML::Form::ListInput->new(
+      type     => 'option',
+      name     => $name,
+      menu     => [ { value => $value, name => $value } ],
+      current  => 0,
+      multiple => 1,
+    );
+
+    $input->add_to_form($self);
+  }
+
+  $input->force_value($value);
+}
+
+package HTML::Form::ForceValue::Form::Input;
+use Sub::Exporter -setup => {
+  into     => 'HTML::Form::Input',
+  exports  => [ qw(force_value) ],
+  groups   => [ default => [ '-all' ] ],
 };
 
 sub force_value {
