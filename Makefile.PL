@@ -7,6 +7,7 @@ WriteMakefile(
   AUTHOR              => 'Ricardo SIGNES <rjbs@cpan.org>',
   VERSION_FROM        => 'lib/HTML/Form/ForceValue.pm',
   ABSTRACT_FROM       => 'lib/HTML/Form/ForceValue.pm',
+  LICENSE             => 'perl',
   PL_FILES            => {},
   PREREQ_PM => {
     'HTML::Form'    =>       0, # minimum version needed unknown
