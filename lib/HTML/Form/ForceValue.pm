@@ -11,6 +11,8 @@ HTML::Form::ForceValue - who cares what values are legal, anyway?
 
 version 0.005
 
+  $Id$
+
 =cut
 
 our $VERSION = '0.005';
