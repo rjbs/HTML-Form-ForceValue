@@ -1,5 +1,8 @@
 Revision history for HTML-Form-ForceValue
 
+0.006   2006-11-14
+        packaging updates
+
 0.005   2006-08-22
         automatically create form fields if needed with $form->force_value
 

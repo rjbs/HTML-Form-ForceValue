@@ -9,13 +9,13 @@ HTML::Form::ForceValue - who cares what values are legal, anyway?
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
   $Id$
 
 =cut
 
-our $VERSION = '0.005';
+our $VERSION = '0.006';
 
 =head1 SYNOPSIS
 
