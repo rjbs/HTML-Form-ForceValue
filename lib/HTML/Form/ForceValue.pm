@@ -9,13 +9,11 @@ HTML::Form::ForceValue - who cares what values are legal, anyway?
 
 =head1 VERSION
 
-version 0.006
-
-  $Id$
+version 0.007
 
 =cut
 
-our $VERSION = '0.006';
+our $VERSION = '0.007';
 
 =head1 SYNOPSIS
 
@@ -36,6 +34,14 @@ our $VERSION = '0.006';
   $mech->form_name("user_info")->find_input("country")->force_value("su");
 
   $mech->submit;
+
+=head1 DEPRECATION NOTICE
+
+As of C<libwww-perl> 5.817, HTML::Form has a strict mode, which restricts form
+values to the options given.  Without strict mode, values may be set to
+anything you like, making this module unnecessary.  It remains on the CPAN for
+use by those who choose not to upgrade their LWP, but in general this code is
+now obsolete.
 
 =head1 DESCRIPTION
 

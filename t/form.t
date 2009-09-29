@@ -5,7 +5,7 @@ use Test::More tests => 8;
 
 use HTML::Form;
 
-my $f = HTML::Form->parse(<<EOT, "http://www.example.com");
+my $f = HTML::Form->parse(<<EOT, base=>"http://www.example.com");
 <form action="http://example.com/">
   <input type='checkbox' name='check_box' checked="checked" />
   <select name='single_select'>
@@ -15,6 +15,8 @@ my $f = HTML::Form->parse(<<EOT, "http://www.example.com");
   </select>
 </form>
 EOT
+
+$f->strict(1) if $f->can('strict');
 
 eval { $f->value(single_select => 'quux') };
 like($@, qr/illegal value/i, "can't set select element to invalid option");
