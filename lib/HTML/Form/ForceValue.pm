@@ -1,19 +1,7 @@
-package HTML::Form::ForceValue;
-
-use warnings;
 use strict;
-
-=head1 NAME
-
-HTML::Form::ForceValue - who cares what values are legal, anyway?
-
-=head1 VERSION
-
-version 0.007
-
-=cut
-
-our $VERSION = '0.007';
+use warnings;
+package HTML::Form::ForceValue;
+# ABSTRACT: who cares what values are legal, anyway?
 
 =head1 SYNOPSIS
 
@@ -71,7 +59,7 @@ sub import {
 }
 
 package HTML::Form::ForceValue::Form;
-use Sub::Exporter -setup => {
+use Sub::Exporter 0.960 -setup => {
   into    => 'HTML::Form',
   exports => [ qw(force_value) ],
   groups  => [ default => [ '-all' ] ],
@@ -121,55 +109,6 @@ This implementation is extremely crude.  This feature should really be in
 HTML::Form (in my humble opinion), and this module should cease to exist once
 it is.  In the meantime, just keep in mind that I spent a lot more time
 packaging this than I did writing it.  I<Caveat importor!>
-
-=head1 AUTHOR
-
-Ricardo SIGNES, C<< <rjbs at cpan.org> >>
-
-=head1 BUGS
-
-Please report any bugs or feature requests to
-C<bug-form at rt.cpan.org>, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=HTML-Form-ForceValue>.
-I will be notified, and then you'll automatically be notified of progress on
-your bug as I make changes.
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc HTML::Form::ForceValue
-
-You can also look for information at:
-
-=over 4
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/HTML-Form-ForceValue>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/HTML-Form-ForceValue>
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=HTML-Form-ForceValue>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/HTML-Form-ForceValue>
-
-=back
-
-=head1 ACKNOWLEDGEMENTS
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2006 Ricardo SIGNES, all rights reserved.
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
 
 =cut
 
