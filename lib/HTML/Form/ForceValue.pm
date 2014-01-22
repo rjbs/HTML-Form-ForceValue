@@ -59,6 +59,7 @@ sub import {
 }
 
 package HTML::Form::ForceValue::Form;
+
 use Sub::Exporter 0.960 -setup => {
   into    => 'HTML::Form',
   exports => [ qw(force_value) ],
@@ -86,6 +87,7 @@ sub force_value {
 }
 
 package HTML::Form::ForceValue::Form::Input;
+
 use Sub::Exporter -setup => {
   into     => 'HTML::Form::Input',
   exports  => [ qw(force_value) ],
